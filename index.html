@@ -1,0 +1,28 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Quiz with Timer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- <button id="loginBtn">Login</button> -->
+    
+    <div id="quiz-container">
+        <div id="timer">10:00</div>
+        <h1>Web Quiz</h1>
+        <p>Answer all the questions correctly</p>
+
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <button id="next-btn" onclick="goToNextQuestion()">Next</button>
+        <button id="submit-btn" onclick="submitAnswer()">Submit</button>
+        <!-- Logout button -->
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-green-800">
+    <div class="container mx-auto min-h-screen">
+        <!-- Navigation -->
+        <nav class="flex items-center justify-between py-5">
+            <!-- Logo -->
+            <div>
+                <img src="img/logo.png" class="w-40 cursor-pointer" alt="">
+            </div>
+
+            <!-- Hamburger Icon for Small Screens -->
+            <button id="menu-toggle" class="block md:hidden">
+                <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="menu" class="hidden md:flex items-center space-x-8">
+                <li><a href="login.html" class="text-blue-500">Free Trials <span
+                            class="text-lg inline-block rotate-90">&#10148;</span></a></li>
+                <li><a href="#" class="no-underline text-purple-500">Get courses</a></li>
+                <li><a href="#" class="no-underline text-yellow-500">Take Quiz</a></li>
+                <li><img src="img/download (2).png" class="w-12 cursor-pointer" alt=""></li>
+            </ul>
+        </nav>
+
+        <!-- Login Form -->
+        <div class="sm:max-w-md w-full mt-10 px-6 py-8 bg-green-800 rounded-lg shadow-md mx-auto">
+            <h2 class="text-2xl text-center font-bold text-white mb-6">Login to your account</h2>
+            <form class="space-y-4" action="#" method="POST" id="loginForm">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required
+                        class="block w-full rounded-md border-gray-300 py-2 px-3 focus:outline-none focus:border-indigo-500">
+                </div>
+
+                <div class="flex justify-between">
+                    <label for="password" class="block text-sm font-extrabold text-gray-700">Password</label>
+                    <a href="#" class="text-sm text-red-600 hover:text-red-500">Forgot password?</a>
+                </div>
+                <input id="password" name="password" type="password" autocomplete="current-password" required
+                    class="block w-full rounded-md border-gray-300 py-2 px-3 focus:outline-none focus:border-indigo-500">
+
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md focus:outline-none focus:bg-indigo-700">Sign
+                    in</button>
+            </form>
+            <p class="mt-4 text-center text-white">New to Quiz? <a href="#"
+                    class="text-indigo-600 hover:text-indigo-500">Sign up here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript to Toggle Menu on Small Screens -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
